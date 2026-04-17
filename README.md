@@ -2,6 +2,8 @@
 
 You're outside a restaurant. The menu is confusing. **Menu Mind** analyses the menu, learns your preferences, and recommends exactly one dish — plus real Google reviews to back it up.
 
+Currently live at: https://lf-hackathon-2026-04-17.vercel.app/ 
+
 ## How it works
 
 1. **Tell us about yourself** — allergies, dietary preferences, spice tolerance, vibe
