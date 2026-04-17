@@ -77,12 +77,19 @@ export async function POST(req: NextRequest) {
             type: "text",
             text: `This is a restaurant menu. ${prefSummary ? `The diner's preferences: ${prefSummary}.` : ""}
 
-Recommend exactly ONE dish from the menu. Also extract the restaurant name if visible on the menu. Respond with valid JSON only, no markdown:
+Recommend exactly ONE dish from the menu. Also extract the restaurant name if visible on the menu. Estimate the calorie count and macronutrient breakdown for the dish. Respond with valid JSON only, no markdown:
 {
   "dish": "<dish name in English>",
   "restaurant": "<restaurant name if visible, otherwise empty string>",
   "description": "<plain English description of what it is, 1-2 sentences>",
-  "why": "<one sentence on why it suits this person>"
+  "why": "<one sentence on why it suits this person>",
+  "nutrition": {
+    "calories": "<estimated kcal, e.g. 450>",
+    "protein": "<estimated grams, e.g. 25g>",
+    "carbs": "<estimated grams, e.g. 40g>",
+    "fat": "<estimated grams, e.g. 18g>",
+    "fiber": "<estimated grams, e.g. 5g>"
+  }
 }`,
           },
         ],
